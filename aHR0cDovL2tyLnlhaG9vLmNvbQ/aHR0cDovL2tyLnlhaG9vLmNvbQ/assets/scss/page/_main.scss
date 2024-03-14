@@ -371,6 +371,7 @@
         }
     }
     &.box9{
+        padding-bottom: .9rem;
         .box9_link1{
             position: absolute;
             left: .1rem;
@@ -452,7 +453,6 @@
             width: 1.6rem;
             height: 0.6rem;
             cursor: pointer;
-            
             text-indent: -9999px;
         }
         
@@ -467,5 +467,22 @@
             text-indent: -9999px;
         }
         
+    }
+}
+.buy_btn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    .buy_link{
+        position: absolute;
+        right: 0.2rem;
+        bottom: .2rem;
+        display: block;
+        width: 1.6rem;
+        height: 0.6rem;
+        cursor: pointer;
+        text-indent: -9999px;
     }
 }
