@@ -109,6 +109,7 @@
     }
     &.box1{
         margin-top: .58rem;
+        padding-bottom: .5rem;
         .esay_cont{
 
             .box1_link2{
@@ -167,11 +168,24 @@
             text-indent:-9999px;
         }
         .box3_link3{
+            
             position: absolute;
             left: .1rem;
             top: 5.6rem;
             display: block;
-            width: 3.3rem;
+            width: 1.2rem;
+            height: 0.5rem;
+            cursor: pointer;
+            text-indent:-9999px;
+        }
+        
+        .box3_link4{
+            
+            position: absolute;
+            right: .1rem;
+            top: 5.6rem;
+            display: block;
+            width: 1.8rem;
             height: 0.5rem;
             cursor: pointer;
             text-indent:-9999px;
@@ -193,7 +207,7 @@
             left: .2rem;
             top: 4rem;
             display: block;
-            width: 2.5rem;
+            width: 3.1rem;
             height: 0.5rem;
             cursor: pointer;
             text-indent:-9999px;
@@ -303,6 +317,18 @@
             cursor: pointer;
             text-indent:-9999px;
         }
+        
+        .box6_1_link3{
+            position: absolute;
+            left: .2rem;
+            bottom: 3.5rem;
+            display: block;
+            width: .6rem;
+            height: 0.4rem;
+            cursor: pointer;
+            text-indent:-9999px;
+            
+        }
     }
 
     &.box6_2{
@@ -369,5 +395,55 @@
     }
     &.box7{
         padding-bottom: .7rem;
+    }
+    &.box10{
+        .box10_link1{
+            position: absolute;
+            left: .1rem;
+            top: .35rem;
+            display: block;
+            width: .6rem;
+            height: 0.5rem;
+            cursor: pointer;
+            text-indent:-9999px;
+            
+        }
+        .box10_link2{
+            position: absolute;
+            right: 0.2rem;
+            bottom: .2rem;
+            display: block;
+            width: 1.6rem;
+            height: 0.6rem;
+            cursor: pointer;
+            
+            text-indent: -9999px;
+        }
+        
+    }
+    &.box11{
+        .box11_link1{
+            position: absolute;
+            left: .1rem;
+            top: .35rem;
+            display: block;
+            width: .6rem;
+            height: 0.5rem;
+            cursor: pointer;
+            text-indent:-9999px;
+            
+        }
+        .box11_link2{
+            position: absolute;
+            right: 0.2rem;
+            bottom: .2rem;
+            display: block;
+            width: 1.6rem;
+            height: 0.6rem;
+            cursor: pointer;
+            
+            text-indent: -9999px;
+        }
+        
     }
 }
