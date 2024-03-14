@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+@keyframes bottomMotion {
+    0%{
+        opacity: 0;
+        bottom:-10%;
+    }
+    70%{
+        opacity: 1;
+        bottom:0
+    }
+    100%{
+        opacity: 1;
+        bottom:0
+    }
+}
+.esay_mode{
+    position: relative;
+    .easy_top{
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+    .easy_btm{
+        position: fixed;
+        opacity: 1;
+        left: 0;
+        bottom:0%;
+        background: #fff;
+        &.on{
+            animation: bottomMotion .7s 0s ease-in 1 forwards;
+        }
+    }
+    .link1{
+        position: absolute;
+        left: 1.8rem;
+        top: 2.8rem;
+        display: block;
+        width: 1.5rem;
+        height: 0.5rem;
+    }
+}
+.esay_mode2{
+    display: none;
+    position: relative;
+    .link2{
+        position: absolute;
+        left: 0.2rem;
+        top: 4rem;
+        display: block;
+        width: 2.5rem;
+        height: 0.5rem;
+    }
+}
+.esay_mode3{
+    display: none;
+    position: relative;
+    .link3{
+        position: absolute;
+        left: 2.6rem;
+        top: 6.8rem;
+        display: block;
+        width: 0.8rem;
+        height: 0.5rem;
+    }
+}
+.esay_mode4{
+    display: none;
+    position: relative;
+    .link4{
+        position: absolute;
+        left: 0.2rem;
+        top: 6.8rem;
+        display: block;
+        width: 3.2rem;
+        height: 0.6rem;
+    }
+}

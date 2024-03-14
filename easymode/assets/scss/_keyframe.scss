@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+// 호출
+// animation: layerHorizontalClose 1s 0s ease 1 backwards;
+
+@keyframes Sec1TabsEffect {
+  0%{
+    opacity: 0;
+    transform: scale(.5);
+  }
+  10%{
+    opacity: 1;
+    transform: scale(.5);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes Sec1HandEffect {
+  0%{
+      opacity: 0;
+      right: .3rem;
+      top: 1.5rem;
+      transform: scale(1);
+  }
+  40%{
+    right: .6rem;
+    top: 1.2rem;
+    transform: scale(1);
+  }
+  70%{
+    opacity: .7;
+    right: .6rem;
+    top: 1.2rem;
+    transform: scale(1);
+  }
+  90%{
+    opacity: 1;
+    right: .6rem;
+    top: 1.2rem;
+    transform: scale(.9);
+  }
+  100%{
+    opacity: 1;
+    right: .6rem;
+    top: 1.2rem;
+    transform: scale(.9);
+  }
+}
+@keyframes Sec1TabsEffect2 {
+  0%{
+    right: 1.14rem;
+    top: 1.14rem;
+    opacity: 1;
+  }
+  100%{
+    right: 1.74rem;
+    top: 1.14rem;
+    opacity: 0;
+  }
+}
+@keyframes Sec1HandEffect2 {
+  0%{
+    right: .6rem;
+    top: 1.2rem;
+    transform: scale(.9);
+    opacity: 1;
+  }
+  100%{
+    right: 1.2rem;
+    top: 1.2rem;
+    transform: scale(.9);
+    opacity: 0;
+  }
+}
+
+@keyframes Sec1HandEffect3 {
+  0%{
+    transform: scale(1);
+  }
+  70%{
+    transform: scale(1);
+  }
+  85%{
+    transform: scale(.9);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes secEffect {
+  0%{
+    top: .36rem;
+    transform: scale(1);
+  }
+  60%{
+    top: .36rem;
+    transform: scale(1);
+  }
+  100%{
+    top: 0.3rem;
+    transform: scale(.6);
+  }
+}
+
+// sec1 motion
+@keyframes Sec1HandEffect4 {
+  0%{
+    transform: scale(1);
+  }
+  20%{
+    transform: scale(.9);
+  }
+  100%{
+    transform: scale(.9);
+  }
+}
+@keyframes Sec1HandEffect5 {
+  0%{
+    transform: scale(.9);
+    top: 1.5rem;
+    opacity: 1;
+  }
+  30%{
+    top: .5rem;
+    transform: scale(.9);
+    opacity: 1;
+  }
+  31%{
+    top: .5rem;
+    transform: scale(.9);
+    opacity: 0;
+  }
+  71%{
+    top: 1.5rem;
+    transform: scale(.9);
+    opacity: 0;
+  }
+  72%{
+    top: 1.5rem;
+    transform: scale(.9);
+    opacity: 1;
+  }
+  99%{
+    top: 2.5rem;
+    transform: scale(.9);
+    opacity: 1;
+  }
+  100%{
+    top: 2.5rem;
+    transform: scale(.9);
+    opacity: 0;
+  }
+}
+@keyframes Sec1TabsEffect3 {
+  0%{
+    top: 1.4rem;
+    opacity: 1;
+  }
+  30%{
+    top: .4rem;
+    opacity: 1;
+  }
+  31%{
+    top: .4rem;
+    opacity: 0;
+  }
+  71%{
+    top: 1.4rem;
+    opacity: 0;
+  }
+  72%{
+    top: 1.4rem;
+    opacity: 1;
+  }
+  99%{
+    top: 2.4rem;
+    opacity: 1;
+  }
+  100%{
+    top: 2.4rem;
+    opacity: 0;
+  }
+}
+
+@keyframes StockList {
+  0%{
+    background-position-y: -.35rem;
+  }
+  30%{
+    background-position-y: -3rem;
+  }
+  31%{
+    background-position-y: -3rem;
+  }
+  61%{
+    background-position-y: -3rem;
+  }
+  100%{
+    background-position-y: -.35rem;
+  }
+}
