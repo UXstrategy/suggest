@@ -160,7 +160,8 @@
         <div class="esay_cont">
             <img src="./assets/images/content10.png" alt="">
             <div class="box10_link1">이전가기</div>
-            <div class="box10_link2">차트가기</div>
+            <div class="box10_link2">매수가기</div>
+            <div class="box10_link3">바텀내리기</div>
         </div>
     </div>
     <div class="esay_mode box11">
@@ -169,6 +170,7 @@
             <img src="./assets/images/content11.png" alt="">
             <div class="box11_link1">이전가기</div>
             <div class="box11_link2">차트가기</div>
+            <div class="box11_link3">이전</div>
         </div>
     </div>
 
@@ -367,14 +369,21 @@
             $('.box10').hide();
             $('.box11').show();
         })
+        $('.box10_link3').on('click', function () {
+            $(window).scrollTop(0);
+            $('.box10').hide();
+            $('.box6_1').show();
+        })
         $('.box11_link2').on('click', function () {
             $(window).scrollTop(0);
             $('.box11').hide();
             $('.box6_3').show();
         })
-
-        home_go
-
+        $('.box11_link3').on('click', function () {
+            $(window).scrollTop(0);
+            $('.box11').hide();
+            $('.box10').show();
+        })
     </script>
 </body>
 
