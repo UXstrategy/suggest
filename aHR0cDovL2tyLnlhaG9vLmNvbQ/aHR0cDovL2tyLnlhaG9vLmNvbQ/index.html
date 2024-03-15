@@ -33,6 +33,11 @@
         <div class="esay_cont">
             <img src="./assets/images/content2.png" alt="">
             <div class="box2_link1">이전가기</div>
+            <div class="motion_sprout">
+                <div class="tree_branch1"></div>
+                <div class="tree_branch2"></div>
+                <div class="tree_branch3"></div>
+            </div>
         </div>
     </div>
     <div class="esay_mode box3">
@@ -204,16 +209,28 @@
             }
         })
 
+
         // 홈
         $('.box1_link1').on('click', function () {
             $(window).scrollTop(0);
             $('.box1').hide();
             $('.box2').show();
+            setTimeout(() => {
+                $('.tree_branch1').addClass('on')
+            }, 500);
+            setTimeout(() => {
+                $('.tree_branch2').addClass('on')
+            }, 900);
+            setTimeout(() => {
+                $('.tree_branch3').addClass('on')
+            }, 1000);
+
         })
         $('.box1_link2').on('click', function () {
             $(window).scrollTop(0);
             $('.box1').hide();
             $('.box3').show();
+
         })
         $('.box1_link3').on('click', function () {
             $(window).scrollTop(0);
@@ -226,6 +243,7 @@
             $(window).scrollTop(0);
             $('.box2').hide();
             $('.box1').show();
+            $('.on').removeClass('on')
         })
 
         // 계좌상세

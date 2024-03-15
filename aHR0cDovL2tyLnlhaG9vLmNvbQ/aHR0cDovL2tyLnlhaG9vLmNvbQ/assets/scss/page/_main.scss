@@ -505,3 +505,82 @@
         height: .56rem;
     }
 }
+
+@keyframes treeBranch1 {
+    0% {
+        clip-path: circle(1% at 48% 100%);
+    }
+    100% {
+        clip-path: circle(100% at 19% 10%);
+    }
+  }
+  @keyframes treeBranch2 {
+    0% {
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(.1);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+
+.motion_sprout{
+    position: absolute;
+    left: .23rem;
+    top: 1rem;
+    background: #fff;
+    border:1px solid #eeeff3;
+    width: .44rem;
+    height: .44rem;
+    border-radius: 1rem;
+    .tree_branch1{
+        position: absolute;
+        left: .17rem;
+        top: .17rem;
+        z-index: 10;
+        display: block;
+        background: url('../images/img_branch1.png') no-repeat left top;
+        width: .14rem;
+        height: .19rem;
+        background-size: 100% 100%;
+        clip-path: circle(1% at 48% 100%);
+        &.on{
+            animation: treeBranch1 .5s 0s ease-in-out 1 forwards;
+        }
+    }
+    .tree_branch2{
+        position: absolute;
+        left: .08rem;
+        top: .1rem;
+        z-index: 1;
+        display: block;
+        background: url('../images/img_branch2.png') no-repeat left top;
+        width: .15rem;
+        height: .13rem;
+        background-size: 100% 100%;
+        transform: scale(0);
+        &.on{
+            animation: treeBranch2 .5s 0s ease-in-out 1 forwards;
+        }
+    }
+    .tree_branch3{
+        position: absolute;
+        left: .26rem;
+        top: .19rem;
+        z-index: 1;
+        display: block;
+        background: url('../images/img_branch3.png') no-repeat left top;
+        transform: scale(0);
+        width: .113rem;
+        height: .093rem;
+        background-size: 100% 100%;
+        &.on{
+            animation: treeBranch2 .5s 0s ease-in-out 1 forwards;
+        }
+    }
+}
