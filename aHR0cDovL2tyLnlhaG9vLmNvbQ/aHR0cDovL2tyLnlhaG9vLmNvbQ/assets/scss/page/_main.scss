@@ -250,6 +250,7 @@
     }
 
     &.box5{
+        padding-bottom: .9rem;
         .box5_link1{
             position: absolute;
             left: .1rem;
@@ -344,6 +345,7 @@
         }
     }
     &.box6_3{
+        padding-bottom: 1rem;
         .box6_3_link1{
             position: absolute;
             left: .1rem;
@@ -471,10 +473,11 @@
 }
 .buy_btn{
     position: fixed;
-    bottom: 0;
+    bottom: .24rem;
     left: 0;
     width: 100%;
     z-index: 10;
+    text-align: center;
     .buy_link{
         position: absolute;
         right: 0.2rem;
@@ -484,5 +487,9 @@
         height: 0.6rem;
         cursor: pointer;
         text-indent: -9999px;
+    }
+    img{
+        width: 3.12rem;
+        height: .56rem;
     }
 }
