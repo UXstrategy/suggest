@@ -194,13 +194,10 @@
             var innerHeight = $(window).innerHeight();
             var scrollHeight = $('body').prop('scrollHeight');
             if ((scrollTop + 200) + innerHeight >= scrollHeight) {
-                console.log('마지막');
                 $('.easy_btm').addClass('on')
             } else if (scrollTop <= 0) {
                 $('.easy_btm').addClass('on');
-                console.log('맨위');
             } else {
-                console.log('평균');
                 $('.easy_btm').removeClass('on')
                 $('.easy_btm').css({ 'bottom': '-10%', 'opacity': '0' })
             }
