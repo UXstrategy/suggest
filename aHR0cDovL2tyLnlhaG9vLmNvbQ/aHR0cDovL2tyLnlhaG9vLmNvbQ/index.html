@@ -65,6 +65,23 @@
             <img src="./assets/images/content4_1.png" alt="">
             <div class="box4_1_link1">이전가기</div>
             <div class="box4_1_link2">보내기키패드</div>
+            <div class="box4_1_link3">10만</div>
+            <div class="box4_1_link4">전액</div>
+            <div class="keypad">
+                <span class="num_1">1</span>
+                <span class="num_2">2</span>
+                <span class="num_3">3</span>
+                <span class="num_4">4</span>
+                <span class="num_5">5</span>
+                <span class="num_6">6</span>
+                <span class="num_7">7</span>
+                <span class="num_8">8</span>
+                <span class="num_9">9</span>
+                <span class="num_0">0</span>
+                <span class="num_sum"><input type="text" placeholder="보낼금액 입력"  value="" readonly></span>
+                <span class="num_back"></span>
+                <span class="num_check"></span>
+            </div>
         </div>
     </div>
     <div class="esay_mode box4_2">
@@ -105,6 +122,24 @@
             <div class="box6_1_link1">이전가기</div>
             <div class="box6_1_link2">매수</div>
             <div class="box6_1_link3">신용</div>
+
+            <div class="keypad">
+                <span class="num_1">1</span>
+                <span class="num_2">2</span>
+                <span class="num_3">3</span>
+                <span class="num_4">4</span>
+                <span class="num_5">5</span>
+                <span class="num_6">6</span>
+                <span class="num_7">7</span>
+                <span class="num_8">8</span>
+                <span class="num_9">9</span>
+                <span class="num_0">0</span>
+                <span class="num_sum"><input type="text" placeholder="수량 입력"  value="" readonly></span>
+                <span class="num_back"></span>
+                <span class="num_reset"></span>
+            </div>
+
+
         </div>
     </div>
 
@@ -112,7 +147,8 @@
         <span class="home_go"></span>
         <div class="esay_cont">
             <img src="./assets/images/content6_2.png" alt="">
-            <div class="box6_2_link1">매수주문</div>
+            <div class="box6_2_link1">확인</div>
+            <div class="box6_2_link2">취소</div>
         </div>
     </div>
 
@@ -209,22 +245,18 @@
             }
         })
 
-
+        var timer;
         // 홈
+        function treeEvent(){
+            setTimeout(() => {
+                $('.tree_branch1').addClass('on')
+            }, 500);
+        }
         $('.box1_link1').on('click', function () {
             $(window).scrollTop(0);
             $('.box1').hide();
             $('.box2').show();
-            setTimeout(() => {
-                $('.tree_branch1').addClass('on')
-            }, 500);
-            setTimeout(() => {
-                $('.tree_branch2').addClass('on')
-            }, 900);
-            setTimeout(() => {
-                $('.tree_branch3').addClass('on')
-            }, 1000);
-
+            treeEvent();
         })
         $('.box1_link2').on('click', function () {
             $(window).scrollTop(0);
@@ -244,6 +276,7 @@
             $('.box2').hide();
             $('.box1').show();
             $('.on').removeClass('on')
+            clearInterval(timer);
         })
 
         // 계좌상세
@@ -285,11 +318,23 @@
             $(window).scrollTop(0);
             $('.box4_1').hide();
             $('.box4').show();
+            sumFunc('reset',$('.box4_1 .num_sum'))
         })
         $('.box4_1_link2').on('click', function () {
             $(window).scrollTop(0);
             $('.box4_1').hide();
             $('.box4_2').show();
+            sumFunc('reset',$('.box4_1 .num_sum'))
+        })
+        $('.box4_1_link3').on('click', function () {
+            $(window).scrollTop(0);
+            sumFunc('reset',$('.box4_1 .num_sum'))
+            sumFunc('100,000',$('.box4_1 .num_sum'));
+        })
+        $('.box4_1_link4').on('click', function () {
+            $(window).scrollTop(0);
+            sumFunc('reset',$('.box4_1 .num_sum'))
+            sumFunc('100,000',$('.box4_1 .num_sum'));
         })
 
         // 내보내기 완료
@@ -346,6 +391,11 @@
             $('.box6_2').hide();
             $('.box6_3').show();
             $('.toast').addClass('on');
+        })
+        $('.box6_2_link2').on('click', function () {
+            $(window).scrollTop(0);
+            $('.box6_2').hide();
+            $('.box6_1').show();
         })
         // 매수주문 완료
         $('.box6_3_link1').on('click', function () {
@@ -427,6 +477,119 @@
             $('.box6').show();
         })
 
+
+        // keypad
+        var keyNum1 = $('.keypad').find('.num_1'),
+        keyNum2 = $('.keypad').find('.num_2'),
+        keyNum3 = $('.keypad').find('.num_3'),
+        keyNum4 = $('.keypad').find('.num_4'),
+        keyNum5 = $('.keypad').find('.num_5'),
+        keyNum6 = $('.keypad').find('.num_6'),
+        keyNum7 = $('.keypad').find('.num_7'),
+        keyNum8 = $('.keypad').find('.num_8'),
+        keyNum9 = $('.keypad').find('.num_9'),
+        keyNum0 = $('.keypad').find('.num_0'),
+        keyReset = $('.keypad').find('.num_reset'),
+        keyBack = $('.keypad').find('.num_back'),
+        keySum = $('.keypad').find('.num_sum'),
+        KeyCheck = $('.keypad').find('.num_check'),        
+        totalSum='';
+
+        function sumFunc(strVal,el){
+            el.removeClass('keyfress');
+            console.log(typeof(String(strVal)),"strVal");
+            if(strVal == 'back'){
+                console.log('ss',totalSum.length)
+                totalSum = totalSum.substring(0, totalSum.length-1);
+                keySum.find('input').val(totalSum)
+                return;
+            }
+            if(strVal =='reset'){
+                totalSum = '';
+            }else{
+                totalSum = totalSum+String(strVal);
+            }
+            console.log(typeof(totalSum),"dddddddddd")
+            keySum.find('input').val(totalSum)
+        }
+
+        keyNum1.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyNum1.on('touchend',function(){
+            sumFunc(1,$(this));
+        })
+        keyNum2.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyNum2.on('touchend',function(){
+            sumFunc(2,$(this));
+        })
+        keyNum3.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyNum3.on('touchend',function(){
+            sumFunc(3,$(this));
+        })
+        keyNum4.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyNum4.on('touchend',function(){
+            sumFunc(4,$(this));
+        })
+        keyNum5.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyNum5.on('touchend',function(){
+            sumFunc(5,$(this));
+        })
+        keyNum6.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyNum6.on('touchend',function(){
+            sumFunc(6,$(this));
+        })
+        keyNum7.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyNum7.on('touchend',function(){
+            sumFunc(7,$(this));
+        })
+        keyNum8.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyNum8.on('touchend',function(){
+            sumFunc(8,$(this));
+        })
+        keyNum9.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyNum9.on('touchend',function(){
+            sumFunc(9,$(this));
+        })
+        keyNum0.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyNum0.on('touchend',function(){
+            sumFunc(0,$(this));
+        })
+        keyBack.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyBack.on('touchend',function(){
+            sumFunc('back',$(this));
+        })
+        keyReset.on('touchstart',function(){
+            $(this).addClass('keyfress')
+        })
+        keyReset.on('touchend',function(){
+            sumFunc('reset',$(this));
+        })
+        keySum.on('touchstart',function(){
+        })
+        keySum.on('touchend',function(){
+        })
+        
     </script>
 </body>
 
