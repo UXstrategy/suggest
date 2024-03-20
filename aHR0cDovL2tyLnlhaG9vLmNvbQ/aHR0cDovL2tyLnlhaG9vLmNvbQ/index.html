@@ -16,10 +16,21 @@
             <img src="./assets/images/top.png" alt="">
             <span class="box1_link1">간편모드_마이페이지이동</span>
         </div>
+        <div class="easy_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/images/card_01.png" alt="">
+                    <span class="box1_link2">간편모드_계좌상세</span>
+                
+                </div>
+                <div class="swiper-slide"><img src="./assets/images/card_02.png" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/images/card_setting.png" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/images/card_03.png" alt=""></div>
+              </div>
+              <div class="swiper-pagination"></div>
+        </div>
         <div class="esay_cont">
             <img src="./assets/images/content1.png" alt="">
-            <span class="box1_link2">간편모드_계좌상세</span>
-            <span class="box1_link3">간편모드_이체_내보내기</span>
         </div>
         <div class="easy_btm">
             <img src="./assets/images/bottom1.png" alt="">
@@ -137,6 +148,7 @@
             <div class="box6_1_link1">이전가기</div>
             <div class="box6_1_link2">매수</div>
             <div class="box6_1_link3">신용</div>
+            <div class="box6_1_link4">팝업</div>
 
             <div class="keypad">
                 <span class="num_1">1</span>
@@ -242,8 +254,16 @@
             <div class="box11_link3">이전</div>
         </div>
     </div>
+    <div class="esay_mode box12">
+        <span class="home_go"></span>
+        <div class="esay_cont">
+            <img src="./assets/images/content12.png" alt="">
+            <div class="box12_link1">창닫기</div>
+        </div>
+    </div>
 
     <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
     <script src="./assets/js/resize.js"></script>
     <script>
         $(window).on('scroll', function () {
@@ -278,11 +298,6 @@
             $('.box1').hide();
             $('.box3').show();
 
-        })
-        $('.box1_link3').on('click', function () {
-            $(window).scrollTop(0);
-            $('.box1').hide();
-            $('.box4').show();
         })
 
         // 마이페이지
@@ -402,6 +417,11 @@
             $('.box6_1').hide();
             $('.box10').show();
         })
+        $('.box6_1_link4').on('click', function () {
+            $(window).scrollTop(0);
+            $('.box6_1').hide();
+            $('.box12').show();
+        })
         // 매수주문
         $('.box6_2_link1').on('click', function () {
             $(window).scrollTop(0);
@@ -488,6 +508,11 @@
             $(window).scrollTop(0);
             $('.box11').hide();
             $('.box10').show();
+        })
+        $('.box12_link1').on('click', function () {
+            $(window).scrollTop(0);
+            $('.box12').hide();
+            $('.box6_1').show();
         })
 
         // buy btn
@@ -610,6 +635,17 @@
         })
         keySum.on('touchend',function(){
         })
+
+
+        var swiper = new Swiper(".easy_swiper", {
+            slidesPerView: 'auto',
+            centeredSlides : true,
+
+            loop : true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
         
     </script>
 </body>

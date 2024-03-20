@@ -112,26 +112,6 @@
         padding-bottom: .5rem;
         .esay_cont{
 
-            .box1_link2{
-                position: absolute;
-                left: .3rem;
-                top: 1rem;
-                display: block;
-                width: 3rem;
-                height: 0.8rem;
-                cursor: pointer;
-                text-indent:-9999px;
-            }
-            .box1_link3{
-                position: absolute;
-                left: 1.8rem;
-                top: 1.9rem;
-                display: block;
-                width: 1.4rem;
-                height: 0.5rem;
-                cursor: pointer;
-                text-indent:-9999px;
-            }
         }
     }
     &.box2{
@@ -353,6 +333,18 @@
             height: 0.4rem;
             cursor: pointer;
             text-indent:-9999px;
+        }
+        
+        .box6_1_link4{
+            position: absolute;
+            left: 0.2rem;
+            bottom: 0.2rem;
+            z-index: 30;
+            display: block;
+            width: 0.6rem;
+            height: 0.65rem;
+            cursor: pointer;
+            text-indent:-9999px;
             
         }
     }
@@ -517,6 +509,18 @@
             text-indent: -9999px;
         }
         
+    }
+    &.box12{
+        .box12_link1{
+            position: absolute;
+            left: 0.4rem;
+            top: 5.4rem;
+            display: block;
+            width: 2.8rem;
+            height: 0.7rem;
+            cursor: pointer;
+            text-indent: -9999px;
+        }        
     }
 }
 .buy_btn{
@@ -824,6 +828,64 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+@keyframes swiperMotionOn {
+    0% {
+        opacity: .6;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  @keyframes swiperMotionOff {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .6;
+    }
+  }
+.easy_swiper{
+    position: absolute;
+    top: .15rem;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+    padding: .2rem 0 .4rem;
+    .swiper-slide{
+        position: relative;
+        width: 3rem;
+        margin-right:.1rem;
+        opacity: .6;
+        animation: swiperMotionOff .5s 0s ease-in-out 1 backwards;
+        &.swiper-slide-active{
+            animation: swiperMotionOn 1s 0s ease-in-out 1 forwards;
+        }
+        .box1_link2{
+            position: absolute;
+            right: 0;
+            top: 0.7rem;
+            z-index: 15;
+            display: block;
+            width: 3rem;
+            height: 0.6rem;
+            cursor: pointer;
+            text-indent: -9999px;
+        }
+    }
+    img{
+        width: 3rem;
+        height: 1.63rem;
+    }
+    .swiper-pagination-bullets .swiper-pagination-bullet{
+        opacity: 1;
+        background: #dddddd;
+        &.swiper-pagination-bullet-active{
+            background: #000;
         }
     }
 }
