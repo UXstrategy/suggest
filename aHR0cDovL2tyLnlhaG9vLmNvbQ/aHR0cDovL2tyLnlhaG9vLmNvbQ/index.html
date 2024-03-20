@@ -37,6 +37,7 @@
             <div class="btm_link1">홈 가기</div>
             <div class="btm_link2">관심 가기</div>
             <div class="btm_link3">탐색 가기</div>
+            <div class="btm_link4">혜택 가기</div>
         </div>
     </div>
     <div class="esay_mode box2">
@@ -203,6 +204,7 @@
             <div class="btm_link1">홈 가기</div>
             <div class="btm_link2">관심 가기</div>
             <div class="btm_link3">탐색 가기</div>
+            <div class="btm_link4">혜택 가기</div>
         </div>
     </div>
 
@@ -219,6 +221,7 @@
             <div class="btm_link1">홈 가기</div>
             <div class="btm_link2">관심 가기</div>
             <div class="btm_link3">탐색 가기</div>
+            <div class="btm_link4">혜택 가기</div>
         </div>
     </div>
 
@@ -261,6 +264,27 @@
             <div class="box12_link1">창닫기</div>
         </div>
     </div>
+
+    
+    <div class="esay_mode box13">
+        <span class="home_go" style="position: fixed; z-index: 10;"></span>
+        <div class="esay_cont">
+            <img src="./assets/images/content13.png" alt="">
+            <div class="motion_sprout">
+                <div class="tree_branch1"></div>
+                <div class="tree_branch2"></div>
+                <div class="tree_branch3"></div>
+            </div>
+        </div>
+        <div class="easy_btm">
+            <img src="./assets/images/bottom4.png" alt="">
+            <div class="btm_link1">홈 가기</div>
+            <div class="btm_link2">관심 가기</div>
+            <div class="btm_link3">탐색 가기</div>
+            <div class="btm_link4">혜택 가기</div>
+        </div>
+    </div>
+
 
     <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
     <script src="./assets/js/lib/swiper-bundle.min.js"></script>
@@ -465,6 +489,12 @@
             $(window).scrollTop(0);
             $('.esay_mode').hide();
             $('.box8').show();
+        })
+        $('.btm_link4').on('click', function () {
+            $(window).scrollTop(0);
+            $('.esay_mode').hide();
+            $('.box13').show();
+            treeEvent();
         })
 
         // 홈바로가기
