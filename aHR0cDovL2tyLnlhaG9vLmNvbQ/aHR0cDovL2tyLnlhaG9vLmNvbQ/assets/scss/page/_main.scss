@@ -118,11 +118,31 @@
             text-indent:-9999px;
         }
     }
-    &.box1{
+    &.box1, &.box1_1{
         margin-top: .93rem;
         padding-bottom: .5rem;
         .esay_cont{
 
+            .box1_link3{
+                position: absolute;
+                left: 1.35rem;
+                top: 4rem;
+                display: block;
+                width: 0.9rem;
+                height: 0.4rem;
+                cursor: pointer;
+                text-indent: -9999px;
+            }
+            .box1_link4{
+                position: absolute;
+                left: 2.38rem;
+                top: 4rem;
+                display: block;
+                width: 0.9rem;
+                height: 0.4rem;
+                cursor: pointer;
+                text-indent: -9999px;
+            }
         }
     }
     &.box2{

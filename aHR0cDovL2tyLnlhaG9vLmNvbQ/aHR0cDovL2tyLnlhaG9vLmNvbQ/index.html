@@ -31,6 +31,39 @@
         </div>
         <div class="esay_cont">
             <img src="./assets/images/content1.png" alt="">
+            <div class="box1_link3">해외탭</div>
+            <div class="box1_link4">상품탭</div>
+        </div>
+        <div class="easy_btm">
+            <img src="./assets/images/bottom1.png" alt="">
+            <div class="btm_link1">홈 가기</div>
+            <div class="btm_link2">관심 가기</div>
+            <div class="btm_link3">탐색 가기</div>
+            <div class="btm_link4">혜택 가기</div>
+        </div>
+    </div>
+    <div class="esay_mode box1_1">
+        <div class="easy_top">
+            <img src="./assets/images/top.png" alt="">
+            <span class="box1_link1">간편모드_마이페이지이동</span>
+        </div>
+        <div class="easy_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/images/card_01.png" alt="">
+                    <span class="box1_link2">간편모드_계좌상세</span>
+                
+                </div>
+                <div class="swiper-slide"><img src="./assets/images/card_02.png" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/images/card_03.png" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/images/card_setting.png" alt=""></div>
+              </div>
+              <div class="swiper-pagination"></div>
+        </div>
+        <div class="esay_cont">
+            <img src="./assets/images/content1_1.png" alt="">
+            <div class="box1_link3">해외탭</div>
+            <div class="box1_link4">상품탭</div>
         </div>
         <div class="easy_btm">
             <img src="./assets/images/bottom1.png" alt="">
@@ -323,6 +356,20 @@
             $('.box3').show();
 
         })
+
+        $('.box1_link3').on('click', function () {
+            $(window).scrollTop(0);
+            $('.box1_1').hide();
+            $('.box1').show();
+        })
+        
+        $('.box1_link4').on('click', function () {
+            $(window).scrollTop(0);
+            $('.box1').hide();
+            $('.box1_1').show();
+        })
+
+        
 
         // 마이페이지
         $('.box2_link1').on('click', function () {
