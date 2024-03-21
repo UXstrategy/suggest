@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간편모드</title>
+    <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/default.css">
+</head>
+
+<body>
+    <div class="esay_mode main_top" style="display: block;">
+        <div class="easy_top">
+            <img src="./assets/images/b/top.png" alt="">
+        </div>
+    </div>
+    <div class="esay_mode box1" style="display: block;">
+        <div class="esay_cont">
+            <img src="./assets/images/b/content1.png" alt="">
+        </div>
+        <div class="easy_btm">
+            <img src="./assets/images/b/bottom1.png" alt="">
+        </div>
+    </div>
+   
+
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="./assets/js/resize.js"></script>
+    <script>
+        $(window).on('scroll', function () {
+            var scrollTop = $(window).scrollTop();
+            var innerHeight = $(window).innerHeight();
+            var scrollHeight = $('body').prop('scrollHeight');
+            if ((scrollTop + 200) + innerHeight >= scrollHeight) {
+                $('.easy_btm').addClass('on')
+            } else if (scrollTop <= 0) {
+                $('.easy_btm').addClass('on');
+            } else {
+                $('.easy_btm').removeClass('on')
+                $('.easy_btm').css({ 'bottom': '-10%', 'opacity': '0' })
+            }
+        })
+
+    </script>
+</body>
+
+</html>
