@@ -11,11 +11,13 @@
 </head>
 
 <body>
-    <div class="esay_mode box1" style="display: block;">
+    <div class="esay_mode main_top" style="display: block;">
         <div class="easy_top">
             <img src="./assets/images/top.png" alt="">
             <span class="box1_link1">간편모드_마이페이지이동</span>
         </div>
+    </div>
+    <div class="esay_mode main_swiper" style="display: block;">
         <div class="easy_swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -29,6 +31,8 @@
               </div>
               <div class="swiper-pagination"></div>
         </div>
+    </div>
+    <div class="esay_mode box1" style="display: block;">
         <div class="esay_cont">
             <img src="./assets/images/content1.png" alt="">
             <div class="box1_link3">해외탭</div>
@@ -43,23 +47,6 @@
         </div>
     </div>
     <div class="esay_mode box1_1">
-        <div class="easy_top">
-            <img src="./assets/images/top.png" alt="">
-            <span class="box1_link1">간편모드_마이페이지이동</span>
-        </div>
-        <div class="easy_swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./assets/images/card_01.png" alt="">
-                    <span class="box1_link2">간편모드_계좌상세</span>
-                
-                </div>
-                <div class="swiper-slide"><img src="./assets/images/card_02.png" alt=""></div>
-                <div class="swiper-slide"><img src="./assets/images/card_03.png" alt=""></div>
-                <div class="swiper-slide"><img src="./assets/images/card_setting.png" alt=""></div>
-              </div>
-              <div class="swiper-pagination"></div>
-        </div>
         <div class="esay_cont">
             <img src="./assets/images/content1_1.png" alt="">
             <div class="box1_link3">해외탭</div>
@@ -350,6 +337,8 @@
             $('.box2').show();
             treeEvent();
         })
+
+
         $('.box1_link2').on('click', function () {
             $(window).scrollTop(0);
             $('.esay_mode').hide();
@@ -360,13 +349,18 @@
         $('.box1_link3').on('click', function () {
             $(window).scrollTop(0);
             $('.esay_mode').hide();
+            $('.main_top').show();
+            $('.main_swiper').show();
             $('.box1').show();
         })
         
         $('.box1_link4').on('click', function () {
             $(window).scrollTop(0);
             $('.esay_mode').hide();
+            $('.main_top').show();
+            $('.main_swiper').show();
             $('.box1_1').show();
+            
         })
 
         
@@ -376,6 +370,8 @@
             $(window).scrollTop(0);
             $('.box2').hide();
             $('.box1').show();
+            $('.main_top').show();
+            $('.main_swiper').show();
             $('.on').removeClass('on')
             clearInterval(timer);
         })
@@ -384,6 +380,8 @@
         $('.box3_link1').on('click', function () {
             $(window).scrollTop(0);
             $('.box3').hide();
+            $('.main_top').show();
+            $('.main_swiper').show();
             $('.box1').show();
         })
         $('.box3_link2').on('click', function () {
@@ -406,6 +404,8 @@
         $('.box4_link1').on('click', function () {
             $(window).scrollTop(0);
             $('.box4').hide();
+            $('.main_top').show();
+            $('.main_swiper').show();
             $('.box1').show();
         })
         $('.box4_link2').on('click', function () {
@@ -442,6 +442,8 @@
         $('.box4_2_link1').on('click', function () {
             $(window).scrollTop(0);
             $('.box4_2').hide();
+            $('.main_top').show();
+            $('.main_swiper').show();
             $('.box1').show();
         })
 
@@ -525,6 +527,8 @@
         $('.btm_link1').on('click', function () {
             $(window).scrollTop(0);
             $('.esay_mode').hide();
+            $('.main_top').show();
+            $('.main_swiper').show();
             $('.box1').show();
         })
         $('.btm_link2').on('click', function () {
@@ -548,6 +552,8 @@
         $('.home_go').on('click', function () {
             $(window).scrollTop(0);
             $('.esay_mode').hide();
+            $('.main_top').show();
+            $('.main_swiper').show();
             $('.box1').show();
         })
 

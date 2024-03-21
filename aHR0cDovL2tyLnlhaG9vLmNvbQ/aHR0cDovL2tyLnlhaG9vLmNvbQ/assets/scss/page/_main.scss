@@ -557,6 +557,11 @@
         padding-bottom: .5rem;
     }
 }
+.main_top{
+    position: absolute;
+    left: 0;
+    top: 0rem;
+}
 .buy_btn{
     position: fixed;
     bottom: .24rem;
@@ -885,7 +890,7 @@
   }
 .easy_swiper{
     position: absolute;
-    top: .15rem;
+    top: .1rem;
     width: 100%;
     left: 0;
     overflow: hidden;
