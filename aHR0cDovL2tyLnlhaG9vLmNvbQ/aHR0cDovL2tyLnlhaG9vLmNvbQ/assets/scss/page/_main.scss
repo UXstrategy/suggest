@@ -555,6 +555,50 @@
     }
     &.box13{
         padding-bottom: .5rem;
+
+    }
+}
+.box13_link1{
+    position: absolute;
+    left: 2rem;
+    top: 4.1rem;
+    display: block;
+    width: 0.35rem;
+    height: 0.4rem;
+    cursor: pointer;
+    text-indent: -9999px;
+}
+.box13_link2{
+    position: absolute;
+    left: 2.38rem;
+    top: 4.1rem;
+    display: block;
+    width: 0.35rem;
+    height: 0.4rem;
+    cursor: pointer;
+    text-indent: -9999px;
+}
+
+.box13_hidden{
+    .box13_link1{
+        position: absolute;
+        left: 2rem;
+        top: 4.4rem;
+        display: block;
+        width: 0.35rem;
+        height: 0.4rem;
+        cursor: pointer;
+        text-indent: -9999px;
+    }
+    .box13_link2{
+        position: absolute;
+        left: 2.38rem;
+        top: 4.4rem;
+        display: block;
+        width: 0.35rem;
+        height: 0.4rem;
+        cursor: pointer;
+        text-indent: -9999px;
     }
 }
 .main_top{

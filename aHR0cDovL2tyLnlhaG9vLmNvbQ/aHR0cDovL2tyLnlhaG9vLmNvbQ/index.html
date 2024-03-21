@@ -290,11 +290,13 @@
         <span class="home_go" style="position: fixed; z-index: 10;"></span>
         <div class="esay_cont">
             <img src="./assets/images/content13.png" alt="">
-            <div class="motion_sprout">
+            <!-- <div class="motion_sprout">
                 <div class="tree_branch1"></div>
                 <div class="tree_branch2"></div>
                 <div class="tree_branch3"></div>
-            </div>
+            </div> -->
+            <span class="box13_link1 type1">본페이지</span>
+            <span class="box13_link2 type2">히든</span>
         </div>
         <div class="easy_btm">
             <img src="./assets/images/bottom4.png" alt="">
@@ -305,6 +307,27 @@
         </div>
     </div>
 
+
+    <div class="esay_mode box13_hidden">
+        <span class="home_go" style="position: fixed; z-index: 10;"></span>
+        <div class="esay_cont">
+            <img src="./assets/images/content13_hidden.png" alt="">
+            <!-- <div class="motion_sprout">
+                <div class="tree_branch1"></div>
+                <div class="tree_branch2"></div>
+                <div class="tree_branch3"></div>
+            </div> -->
+            <span class="box13_link1 type3">본페이지</span>
+            <span class="box13_link2 type4">히든</span>
+        </div>
+        <div class="easy_btm">
+            <img src="./assets/images/bottom4.png" alt="">
+            <div class="btm_link1">홈 가기</div>
+            <div class="btm_link2">관심 가기</div>
+            <div class="btm_link3">탐색 가기</div>
+            <div class="btm_link4">혜택 가기</div>
+        </div>
+    </div>
 
     <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
     <script src="./assets/js/lib/swiper-bundle.min.js"></script>
@@ -596,6 +619,22 @@
             $('.box12').hide();
             $('.box6_1').show();
         })
+
+        $('.box13_link1').on('click', function () {
+            $(window).scrollTop(0);
+            $('.box13_hidden').hide();
+            $('.box13').show();
+        })
+
+        $('.box13_link2').on('click', function () {
+            $(window).scrollTop(0);
+            $('.box13').hide();
+            $('.box13_hidden').show();
+        })
+
+
+
+
 
         // buy btn
         $('.buy_link').on('click', function () {
