@@ -1,0 +1,93 @@
+@charset "utf-8";
+%baseWidth{
+    max-width: 640px;
+    margin: 0 auto;
+}
+html,body{
+    height: 100%;
+}
+.wrap{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+    background-size: 100%;
+    .cont1{
+        position: relative;
+        text-align: center;
+        height: calc(100% - 0.46rem);
+        box-sizing: border-box;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .pop_close{
+            position: absolute;
+            right: .1rem;
+            top: .1rem;
+            z-index: 10;
+            width: .5rem;
+            height: .5rem;
+            display: block;
+            text-indent: -9999px;
+            a{
+                background: url('../images/icon_close.png') no-repeat 0 0;
+                background-size: .2rem .2rem;
+                background-position: 50% 50%;
+                width: .5rem;
+                height: .5rem;
+                display: block;
+            }
+        }
+        .easy_swiper{
+            position: relative;
+            .swiper-pagination{
+                bottom: .60rem;
+                &.swiper-pagination-bullets .swiper-pagination-bullet{
+                    opacity: 1;
+                    background: #eeeeee;
+                    width: .06rem;
+                    height: .06rem;
+                    margin: 0 .02rem;
+                    &.swiper-pagination-bullet-active{
+                        background: #bd527e;
+                    }
+                }
+            }
+        }
+    }
+    .footer_btn{
+        width: 100%;
+        height: .46rem;
+        overflow: hidden;
+        p{
+            float: left;
+            width: 50%;
+            text-align: center;
+            a{
+                display: block;
+                width: 100%;
+                padding-top: .12rem;
+                height: .46rem;
+                box-sizing: border-box;
+
+                font-size: .17rem;
+                font-weight: bold;
+            }
+            &:nth-child(1){
+                a{
+                    background: #dddddd;
+                    color: #333333;
+                    font-weight: 400;
+                }
+            }
+            &:nth-child(2){
+                border: 1px solid #000;
+                a{
+                    background: #212266;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

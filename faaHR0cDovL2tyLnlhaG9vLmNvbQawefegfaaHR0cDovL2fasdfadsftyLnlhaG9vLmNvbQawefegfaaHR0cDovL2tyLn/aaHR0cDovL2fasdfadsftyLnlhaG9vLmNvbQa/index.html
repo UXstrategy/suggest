@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미국옵션가이드</title>
+    <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/default.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="cont1">
+            <div class="pop_close"><a href="javascript:alert('창닫기')">닫기</a></div>
+            <div class="esay_mode main_swiper" style="display: block;">
+                <div class="easy_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./assets/images/img_guide_01.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/img_guide_02.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/img_guide_03.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/img_guide_04.png" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer_btn">
+            <p><a href="javascript:alert('이전')">이전</a></p>
+            <p><a href="javascript:alert('확인')">확인</a></p>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="./assets/js/resize.js"></script>
+    <script>
+        var swiper = new Swiper(".easy_swiper", {
+            slidesPerView: 'auto',
+            centeredSlides : true,
+
+            loop : true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+</body>
+
+</html>
