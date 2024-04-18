@@ -21,10 +21,24 @@
                         <div class="swiper-slide"><img src="./assets/images/img_guide_02.png" alt=""></div>
                         <div class="swiper-slide"><img src="./assets/images/img_guide_03.png" alt=""></div>
                         <div class="swiper-slide"><img src="./assets/images/img_guide_04.png" alt=""></div>
+                        <div class="swiper-slide oringSwiper">
+                            <h3>미국주식옵션<br>지금 바로 시작하세요</h3>
+                            <img class="swiper_img" src="./assets/images/img_guide.png" alt="">
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
-
                 </div>
+                <div class="info_wrap">
+                    <h3 class="info_tit">유의사항</h3>
+                    <ul class="info_list">
+                        <li>투자 전 설명 청취 및 상품설명서·약관을 필독하세요.</li>
+                        <li>예금자보호법상 보호 상품 아닙니다.</li>
+                        <li>자산가격, 환율변동 등에 따른 원금 초과손실이 가능하며, 투자자에 귀속됩니다.</li>
+                        <li>유지증거금 미달 시 강제 청산에 유의하세요.</li>
+                        <li>해외선물 수수료 (달러상품 기준 계약 당 $7.5) 등 자세한 내용은 홈페이지를 참고하세요.</li>
+                    </ul>
+                </div>
+                <button class="footer_btn" type="button">미국주식옵션 호가 주문하기</button>
             </div>
         </div>
         <!-- <div class="footer_btn">
@@ -46,6 +60,14 @@
             pagination: {
                 el: ".swiper-pagination",
             },
+        });
+
+        swiper.on('slideChange', function () {
+            if(swiper.realIndex == 4){
+                $('.info_wrap, .footer_btn').show();
+            }else{
+                $('.info_wrap, .footer_btn').hide();
+            }
         });
     </script>
 </body>
