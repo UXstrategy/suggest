@@ -40,7 +40,7 @@
         @include color(border-color,line1);
         h3{
             height: .56rem;
-            line-height: .58rem;
+            line-height: .59rem;
             font-size: .2rem;
             font-weight: bold;
             @include color(color,tit)
@@ -64,7 +64,7 @@
             display: block;
             width: 100%;
             height: .46rem;
-            line-height: .46rem;
+            line-height: .49rem;
             font-size: .16rem;
             font-weight: bold;
             @include color(background-color,bg2);
