@@ -1,0 +1,98 @@
+@charset "utf-8";
+%baseWidth{
+    max-width: 640px;
+    margin: 0 auto;
+}
+.mode_check{
+    position: fixed;
+    right: 0;
+    top: 30%;
+    z-index: 1000;
+    span{
+        display: block;
+        font-size: .1rem;
+        text-align: center;
+        padding: .03rem .1rem;
+        margin: .1rem;
+        border-radius: .1rem;
+        cursor: pointer;
+        &:nth-child(1){
+            background: #fff;
+            color: #000;
+            border: 1px solid #000;
+        }
+        &:nth-child(2){
+            background: #000;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+    }
+}
+.wrap{
+    @extend %baseWidth;
+    text-align: center;
+    .header_fixed{
+        @extend %baseWidth;
+        position: sticky;
+        top: 0;
+        height: .56rem;
+        border-bottom: 1px solid;
+        @include color(border-color,line1);
+        h3{
+            height: .56rem;
+            line-height: .56rem;
+            font-size: .2rem;
+            font-weight: bold;
+            @include color(color,tit)
+        }
+        .ico_close{
+            position: absolute;
+            right: .1rem;
+            top: .08rem;
+            display: block;
+            text-indent: -9999px;
+            @include bgImg("../../assets/images/ico_close.png", "../../assets/images/ico_close_dm.png",.4rem,.41rem);
+        }
+    }
+    .footer_fixed{
+        @extend %baseWidth;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: .46rem;
+        a{
+            display: block;
+            width: 100%;
+            height: .46rem;
+            line-height: .46rem;
+            font-size: .16rem;
+            font-weight: bold;
+            @include color(background-color,bg2);
+            @include color(color,txt2)
+        }
+    }
+
+    .content{
+        .isa_box{
+            margin-top: 1.3rem;
+            &::before{
+                content:"";
+                display: block;
+                margin: 0 auto;
+                @include bgImg("../../assets/images/img_isa.png", "../../assets/images/img_isa_dm.png",1.9rem,1.4rem);
+            }
+            .txt1{
+                font-size: .16rem;
+                font-weight: 700;
+                @include color(color,txt1);
+                margin: .18rem 0 .13rem;
+            }
+            .txt2{
+                font-size: .14rem;
+                font-weight: 600;
+                line-height: .2rem;
+                @include color(color,tit);
+            }
+        }
+    }
+}

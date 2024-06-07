@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토스 ISA 계좌개설</title>
+    <link rel="stylesheet" href="./assets/css/default.css">
+</head>
+
+<body>
+    <div class="mode_check">
+        <span>L</span>
+        <span>D</span>
+    </div>
+    <div class="wrap">
+        <div class="header_fixed">
+            <h3>중개형 ISA 계좌개설 완료</h3>
+            <a href="javascript:alert('팝업종료')" class="ico_close">닫기</a>
+        </div>
+        <div class="content">
+            <div class="isa_box">
+                <p class="txt1">중개형 ISA 계좌개설을 완료하셨나요?</p>
+                <p class="txt2">토스 포인트 지급 여부는 <br> 토스 앱을 통해 확인할 수 있습니다.</p>
+            </div>
+        </div>
+        <div class="footer_fixed">
+            <a href="javascript:alert('확인')">확인</a>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script>
+    // dark mode 확인용
+    $('.mode_check span').on('click',function(){
+        var idx = $('.mode_check span').index(this);
+        if(idx==0){
+            alert('light mode');
+            $('body').removeClass()
+        }else if(idx==1){
+            alert('dark mode');
+            $('body').addClass('dark')
+        }
+    })
+
+    // 수치 변경
+    var windowSize = $(window).innerWidth(),
+    baseSize = 640;
+    if(windowSize < baseSize){
+        $(document).find('html').animate({fontSize:($(window).innerWidth())*10/36},0)
+    }else{
+        $(document).find('html').animate({fontSize:baseSize*10/36},0)
+    }
+    // rem resize 수치 변환
+    $(window).on('resize',function(){
+        if($(window).innerWidth() < baseSize){
+            $(document).find('html').animate({fontSize:($(window).innerWidth())*10/36},0)
+        }else{
+            $(document).find('html').animate({fontSize:baseSize*10/36},0)
+        }
+    });
+    </script>
+</body>
+
+</html>

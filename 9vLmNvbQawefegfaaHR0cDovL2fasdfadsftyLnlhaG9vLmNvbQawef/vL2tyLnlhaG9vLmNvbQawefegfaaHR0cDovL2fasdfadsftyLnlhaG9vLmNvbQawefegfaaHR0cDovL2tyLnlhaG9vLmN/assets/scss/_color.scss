@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+// 테마별 색상
+$colors:(
+    light: (
+        tit : #333333,
+        txt1 : #333333,
+        txt2 : #ffffff,
+        bg1 : #ffffff,
+        bg2 : #212266,
+        line1 : #cccccc,
+    ),
+    dark: (
+        tit : #cccccc,
+        txt1 : #eeeeee,
+        txt2 : #cccccc,
+        bg1 : #121212,
+        bg2 : #222355,
+        line1 : #666666,
+    )
+);
+
+@function func_color($key, $type: 'light'){
+    @each $name, $color in map-get($colors, $type){
+        @if($key == $name){
+            @return $color;
+        }
+    }
+}
+
+@mixin color($property,$color, $important: false){
+    #{$property}: func_color($color) #{if($important, '!important', '')};
+    @at-root body.dark & {
+        #{$property}: func_color($color, dark) #{if($important, '!important', '')};
+    }
+}
+
+@mixin bgImg($lightUrl,$darkUrl:null,$width:null,$height:null) {
+    background-image: url($lightUrl);
+    width: $width;
+    height: $height;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @at-root body.dark & {
+        background-image: url($darkUrl);
+    }
+}
